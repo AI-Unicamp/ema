@@ -1,3 +1,5 @@
-# EMA
+# EMA Project
 
-<img src="logo.png" width="200" height="200"/>
+<p align="center">
+  <img width="200" height="200" src="logo.png">
+</p>
