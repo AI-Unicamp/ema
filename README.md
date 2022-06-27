@@ -1,3 +1,3 @@
-![Alt text](logo.jpg?raw=true "EMA")
+![Alt text](logo.png?raw=true "EMA")
 
 # EMA
