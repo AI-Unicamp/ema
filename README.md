@@ -52,6 +52,6 @@ dataset
 ├── table knife
 ├── vase
 └── wardrobe
-
+```
 ## Credits
 Thanks to Amanda Oliveira, from IBRAM for the valuable information she provided regarding her experience in Brazilian museums. We also thank the Tainacan community for their support.
