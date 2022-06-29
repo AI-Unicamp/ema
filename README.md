@@ -13,5 +13,5 @@ the source folder.
 
 ## Notebooks
 
-Contains the resnet50 execution script and the exploratory part before the model
+This ![directory](./notebooks/) contains the resnet50 execution script and the exploratory part before the model
 database achievement.
