@@ -18,7 +18,7 @@ database achievement.
 
 ## Processed dataset
 If you are interested in the dataset generate by default from the scraper script you can use the one applied to the iPres Conference. Access 
-![here](https://drive.google.com/u/0/uc?id=1FGllyNtNe57ALeJ9edeJv9-te1nbwURD&export=download&confirm=t). The dataset have the following structure:
+![here](https://drive.google.com/file/d/1FGllyNtNe57ALeJ9edeJv9-te1nbwURD/view). The dataset have the following structure:
 ```bash
 dataset
 ├── bed
