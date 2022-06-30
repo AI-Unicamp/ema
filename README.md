@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 -->
-<h1 align="left">
+<h1 align="center">
   <br>
      <img src="logo.png" alt="EMA logo" width="120" height="178">
   <br>
