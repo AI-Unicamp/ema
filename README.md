@@ -1,10 +1,8 @@
 # EMA Project
 
 <!-- markdownlint-disable MD033 -->
-<p align="center">
-  <img width="200" height="200" src="logo.png">
-</p>
-
+<img src="logo.png" align="right"
+     alt="EMA logo" width="120" height="178">
 ## Scraper
 
 The [scraper](./scraper/) directory contains the script needed to download, treat and create the EMA
