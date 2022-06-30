@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 <h1 align="center">
   <br>
      <img src="logo.png" alt="EMA logo" width="120" height="178">
@@ -5,7 +6,16 @@
   EMA Project
   <br>
 </h1>
-<!-- markdownlint-disable MD033 -->
+
+<h4 align="center">A automatic metadata extractan project.</h4>
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#scraper">Scraper</a> •
+  <a href="#notebooks">Notebooks</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
+
 ## Scraper
 
 The [scraper](./scraper/) directory contains the script needed to download, treat and create the EMA
