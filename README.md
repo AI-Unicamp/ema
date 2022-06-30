@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-     <img src="logo.png" align="right" alt="EMA logo" width="120" height="178">
+     <img src="logo.png" alt="EMA logo" width="120" height="178">
   <br>
   EMA Project
   <br>
