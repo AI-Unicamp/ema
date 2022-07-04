@@ -32,7 +32,19 @@ docker-compose up
 
 **NOTE:** The full completion may take while due to the images database size.
 
-### From script
+### From script -- One command
+
+It is possible to download the whole database, text and images, with one python
+execution command:
+
+```bash
+python database create_model_db
+```
+
+The output is a data directory in the root project containing all raw, interim
+and processed data. The model dataset is inside the processed one.
+
+### From script -- Step by step
 
 #### Download the whole text database
 
@@ -47,16 +59,16 @@ The JSON file's name stored are structured as follows:
 
 Where:
 
-- `museum_acr`: museum acronym
-- `item_id`: item identification
-
-The whole text database are stored at `data/raw/jsons` folder.
+* `museum_acr`: museum acronym
+* `item_id`: item identification
 
 #### Usage
 
 ```bash
-python database.py fetch_text.py
+python database.py fetch_jsons
 ```
+
+The whole text database are stored at `data/raw/jsons` folder.
 
 ### Download the whole images database
 
@@ -70,17 +82,17 @@ files at *raw JSON database*. An image file name is structured as follows:
 
 Where:
 
-- `museum_acr`: museum acronym
-- `item_id`: item identification
-- `item_number`: number of the image in the sequence gathered from the website.
+* `museum_acr`: museum acronym
+* `item_id`: item identification
+* `item_number`: number of the image in the sequence gathered from the website.
 Be aware that this ID is only available to distinguish images from the same
 item at the downloaded database.
-- `format`: image format at the data base
+* `format`: image format at the data base
 
 #### Usage
 
 ```bash
-python database.py fetch_images.py
+python database.py fetch_images
 ```
 
 -----------
@@ -91,18 +103,30 @@ that module first and, the starts after finish.
 
 -----------
 
-### Classify JSON by Interior Thesaurus and Refined Labels: `classify_jsons.py`
+### Classify JSON by Interior thesaurus and Refined Labels: `classify_jsons.py`
 
 This step will get all JSON data classified by its thesaurus type and
 save in the interim folder and after that will save all JSON that matches
 the refined labels passed as list into to the processed folder. This step is
 required to gain the thesaurus images for interim and processed image files.
 
-Execution script:
+Execution script -- Text:
+
+1. By thesaurus
 
 ```bash
-python modules/classify_jsons.py
+python database.py classify_jsons_by_thesaurus
 ```
+
+Output: ```data/interim/jsons```
+
+2. By labels
+
+```bash
+python database.py classify_jsons_by_labels
+```
+
+Output: ```data/processed/jsons```
 
 ### Classify images by Interior Thesaurus or list of labels: `classify_images.py`
 
@@ -111,21 +135,30 @@ and copy them to the interim database. The classification by labels is made by
 passing a list of labels to the same script and after that is saved in to the
 processed images folder. Will only be trigged if the JSON exists.
 
-Execution script:
+Execution script -- Images:
+
+1. By Thesaurus
 
 ```bash
-python modules/classify_images.py
+python database.py classify_imgs_by_thesaurus
 ```
+
+Output: ```data/interim/images```
+
+2. By labels
+
+```bash
+python database.py classify_imgs_by_labels
+```
+
+Output: ```data/processed/images```
 
 ### Data
 
-----------;
 Contains all the data from IBRAM database, the classified ones, in interim
 folder, by its thesaurus and the processed ones.
 
 ### Project Structure
-
-----------;
 
 ```bash
 ├── data

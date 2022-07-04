@@ -216,7 +216,7 @@ def create_model_db(ctx, labels, field):
         print('Processed model database already exists.')
 
     print('Removing duplicated images...')
-    ctx.invoke(classify_jsons_by_labels)
+    ctx.invoke(duplicate_remover)
     print('Duplicated images has been removed successifully.')
 
     print("DONE: Database has been completed successifully.\n")
