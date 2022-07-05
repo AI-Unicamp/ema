@@ -34,7 +34,7 @@ docker-compose up
 
 **Output:** The modeldb is generated at ```data``` directory.
 
-### From script &mdash One command
+### From script &mdash; One command
 
 It is possible to download the whole database, text and images, with one python
 execution command:
@@ -46,7 +46,7 @@ python database create_model_db
 The output is a ```data``` directory in containing all raw, interim
 and processed data. The model dataset is inside the processed one.
 
-### From script &mdash Step by step
+### From script &mdash; Step by step
 
 #### Download the whole text database
 
