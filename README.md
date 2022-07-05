@@ -28,7 +28,7 @@ The [notebooks](./notebooks/) directory contains the resnet50 execution script a
 database achievement.
 
 ## Processed dataset
-If you are interested in the dataset generate by default from the scraper script you can use the one applied to the iPres Conference. Access
+If you are interested in the dataset generate by default from the scraper script you can use the one submited to the iPres 2022 Conference. Access
 [here](https://drive.google.com/file/d/1FGllyNtNe57ALeJ9edeJv9-te1nbwURD/view).
 
 The dataset have the following structure:
