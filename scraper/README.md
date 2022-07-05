@@ -32,7 +32,9 @@ docker-compose up
 
 **NOTE:** The full completion may take while due to the images database size.
 
-### From script -- One command
+**Output:** The modeldb is generated at ```data``` directory.
+
+### From script &mdash One command
 
 It is possible to download the whole database, text and images, with one python
 execution command:
@@ -41,10 +43,10 @@ execution command:
 python database create_model_db
 ```
 
-The output is a data directory in the root project containing all raw, interim
+The output is a ```data``` directory in containing all raw, interim
 and processed data. The model dataset is inside the processed one.
 
-### From script -- Step by step
+### From script &mdash Step by step
 
 #### Download the whole text database
 
@@ -67,8 +69,8 @@ Where:
 ```bash
 python database.py fetch_jsons
 ```
-
-The whole text database are stored at `data/raw/jsons` folder.
+  
+**Output:** ```data/raw/jsons```
 
 ### Download the whole images database
 
@@ -95,6 +97,8 @@ item at the downloaded database.
 python database.py fetch_images
 ```
 
+**Output:** ```data/raw/images```
+
 -----------
 
 **NOTE:** The images will be downloaded only if the JSON files where
@@ -103,7 +107,7 @@ that module first and, the starts after finish.
 
 -----------
 
-### Classify JSON by Interior thesaurus and Refined Labels: `classify_jsons.py`
+### Classify JSON by Thesaurus and Refined Labels
 
 This step will get all JSON data classified by its thesaurus type and
 save in the interim folder and after that will save all JSON that matches
@@ -119,6 +123,7 @@ python database.py classify_jsons_by_thesaurus
 ```
 
 Output: ```data/interim/jsons```
+**NOTE:** The default Thesaurus is Interior, code 05. 
 
 2. By labels
 
@@ -126,9 +131,9 @@ Output: ```data/interim/jsons```
 python database.py classify_jsons_by_labels
 ```
 
-Output: ```data/processed/jsons```
+**Output:** ```data/processed/jsons```
 
-### Classify images by Interior Thesaurus or list of labels: `classify_images.py`
+### Classify images by Thesaurus or list of labels
 
 Takes the classified JSON and its ID to get the images in the raw database
 and copy them to the interim database. The classification by labels is made by
@@ -143,7 +148,8 @@ Execution script -- Images:
 python database.py classify_imgs_by_thesaurus
 ```
 
-Output: ```data/interim/images```
+**Output:** ```data/interim/images```
+**NOTE:** The default Thesaurus is Interior, code 05. 
 
 2. By labels
 
@@ -151,12 +157,20 @@ Output: ```data/interim/images```
 python database.py classify_imgs_by_labels
 ```
 
-Output: ```data/processed/images```
+**Output:** ```data/processed/images```
 
-### Data
+### Build the refined dataset
 
-Contains all the data from IBRAM database, the classified ones, in interim
-folder, by its thesaurus and the processed ones.
+The refined dataset, called modeldb, is structured by labels and have all
+duplicated images removed. This dataset is ready to be used in multi-label
+classification models.
+
+```bash
+python database create_model_db
+```
+
+The output is a ```data``` directory in containing all raw, interim
+and processed data. The model dataset is inside the processed one.
 
 ### Project Structure
 
