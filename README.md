@@ -16,6 +16,9 @@
   <a href="#credits">Credits</a> •
 </p>
 
+## About
+EMA project is a contribution towards the development of automated metadata annotation tools. At the current stage a refined dataset is ready to use and has been tested in a multi-label classification model.
+
 ## Scraper
 
 The [scraper](./scraper/) directory contains the script needed to download, treat and create the EMA
