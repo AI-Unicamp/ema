@@ -9,7 +9,7 @@
 
 <h4 align="center">A automatic metadata extractan project.</h4>
 <p align="center">
-  <a href="#about">About</a> •
+  <a href="#about">• About</a> •
   <a href="#scraper">Scraper</a> •
   <a href="#notebooks">Notebooks</a> •
   <a href="#processed-dataset">Processed dataset</a> •
