@@ -13,7 +13,7 @@
   <a href="#scraper">Scraper</a> •
   <a href="#notebooks">Notebooks</a> •
   <a href="#processed-dataset">Processed dataset</a> •
-  <a href="#credits">Credits</a> •
+  <a href="#credits">Credits</a>
 </p>
 
 ## About
